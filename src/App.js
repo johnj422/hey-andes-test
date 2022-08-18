@@ -13,11 +13,16 @@ function App() {
     dispatch(data())
   }, [])
 
-  console.log(test)
+  // try {
+  //   const docRef = addDoc(collection(db, "agencys"), sales);
+  //   console.log("Document written with ID: ", docRef.id);
+  // } catch (e) {
+  //   console.error("Error adding document: ", e);
+  // }
 
   return (
     <div className="App">
-
+      <h1>Hola mundo!</h1>
     </div>
   );
 }
