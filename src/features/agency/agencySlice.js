@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { db } from '../../Firebase/config'
 
 const initialState = {
   allAgencys: [],
@@ -9,6 +10,7 @@ export const agencySlice = createSlice({
   initialState,
   reducers: {
     data: (state) => {
+      
       state.allAgencys = ['test']
     },
   },

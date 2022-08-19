@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.nav{
+  height: 8rem;
+  background-color: rgb(155, 155, 155);
+  padding-top: 0;
+}
+.nav h1{
+  padding-top: 2.5rem;
+  margin-top: 0;
+  text-indent: 4rem;
+}
+
