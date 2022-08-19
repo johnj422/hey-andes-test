@@ -10,12 +10,7 @@ export const agencySlice = createSlice({
   reducers: {
     data: (state) => {
       state.allAgencys = ['test']
- 
     },
-   
-    // incrementByAmount: (state, action) => {
-    //   state.value += action.payload
-    // },
   },
 })
 
