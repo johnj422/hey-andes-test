@@ -32,7 +32,7 @@ code {
 }
 
 .total {
-  height: 15rem;
+  height: 13rem;
   width: 45%;
   background-color: rgb(155, 155, 155);
   margin-top: 2rem;
@@ -55,6 +55,14 @@ code {
 table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
+}
+td{
+  text-indent: 2rem;
+  font-size: 1.4rem;
+}
+th{
+  text-align: left;
+  text-indent: 2rem;
 }
 .table {
   width: 95%;

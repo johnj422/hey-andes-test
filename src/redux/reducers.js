@@ -1,7 +1,9 @@
-import { GET_ALL_AGENCYS } from './actions'
+import { GET_ALL_AGENCYS, GET_AGENCYS_NAMES } from './actions'
 
 const initialState = {
     allAgencys: [],
+    agencyNameArr: [],
+
 }
 
 export default function reducer(state = initialState, action) {
@@ -10,6 +12,11 @@ export default function reducer(state = initialState, action) {
             return {
                 ...state,
                 allAgencys: action.payload
+            }
+        case GET_AGENCYS_NAMES:
+            return {
+                ...state,
+                agencyNamesArr: action.payload
             }
         default:
             return state;
