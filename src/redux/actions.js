@@ -5,27 +5,29 @@ import { async } from '@firebase/util';
 
 export const GET_ALL_AGENCYS = 'GET_ALL_AGENCYS';
 export const GET_AGENCYS_NAMES = 'GET_AGENCYS_NAMES';
+export const GET_TOTAL_SALES = 'GET_TOTAL_SALES';
 
 export const getAgencys = () => {
-    let agencys = [];
-    return async function (dispatch){
+  let agencys = [];
+  return async function (dispatch) {
     const querySnapshot = await getDocs(collection(db, "sales"));
     querySnapshot.forEach((doc) => {
       agencys.push(doc.data());
     });
-        return dispatch({
-            type: GET_ALL_AGENCYS,
-            payload: agencys
-        })
-    }
-    
-    
+    return dispatch({
+      type: GET_ALL_AGENCYS,
+      payload: agencys
+    })
   }
+
+
+}
+
 export const agencyNames = () => {
   let agencys = []
-  return async function (dispatch){
+  return async function (dispatch) {
 
-    const q = query(collection(db, 'sales') );
+    const q = query(collection(db, 'sales'));
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
       agencys.push(doc.data().nameAgency);
@@ -35,7 +37,17 @@ export const agencyNames = () => {
     return dispatch({
       type: GET_AGENCYS_NAMES,
       payload: result
-  })
+    })
   }
-  
+
+}
+
+export const getTotalSales = (totalSales) => {
+  return async function (dispatch) {
+    let result = totalSales;
+    return dispatch({
+      type: GET_TOTAL_SALES,
+      payload: result
+    })
+  }
 }
