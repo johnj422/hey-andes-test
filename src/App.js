@@ -11,6 +11,7 @@ function App() {
   return (
     <>
       <Routes>
+        <Route path='/' element={ <Agencys />}/>
         <Route path='/empresas' element={ <Agencys />}/>
         <Route path='/empresas/:nombre_empresa' element={ <Detail />}/>
       </Routes>
